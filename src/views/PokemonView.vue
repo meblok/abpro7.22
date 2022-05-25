@@ -10,7 +10,7 @@
     <div class="row justify-content-center">
       <div
         class="card text-white bg-dark  col-12 col-sm-3 m-4 shadow-lg p-3 mb-5  rounded "
-        v-for="(item, index) in results"
+        v-for="(item, index) in pokedex"
         :key="index"
       >
         <div class="card-body">
@@ -23,28 +23,30 @@
 </template>
 
 <script>
-
 import axios from "axios";
 export default {
   data() {
     return {
-   results:"",
-         search: "pikachu",
+     
+      search: "pikachu",
+      pokedex :[]
     }
   },
 methods:{
   async getPokemones(pokemon =""){
     let response = await axios.get(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
 
-     return response.data
-
-  
+     return response.data  
   }},
  async created() {
-  const response = await this.getPokemones()
+  const response = await this.getPokemones(this.search)
+  this.pokedex = response.abilities[0].ability
+  
   console.log(response)
+
+
 },
-   //Filtro de busqueda
+ 
  
 }
 </script>
