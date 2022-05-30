@@ -48,12 +48,7 @@ export default {
     }catch(error){
       console.log(error.message)
     }
-
-
-}
-
-
-   
+} 
 
 }
 </script>
