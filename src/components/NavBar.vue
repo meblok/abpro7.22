@@ -13,11 +13,15 @@
             <a class="nav-link" href=""><router-link to="/home">Home</router-link></a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href=""><router-link to="/administracion">Administración</router-link></a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href=""><router-link to="/">Logout</router-link></a>
           </li>
-           <li class="nav-item">
-            <a class="nav-link" href=""><router-link to="/pokemon">Pokemon</router-link></a>
+          <li class="nav-item">
+           <p class="nav-link">User: admin@admin.gmail</p>
           </li>
+           
         </ul>
       </div>
     </div>
