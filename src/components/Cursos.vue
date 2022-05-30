@@ -19,6 +19,7 @@
           <p class="card-text">Valor: {{ item.precio }}</p>
           <p class="card-text">Duracion: {{ item.duracion }}</p>
           <p class="card-text">Cupos: {{ item.cupos }}</p>
+          <button >Ver mas</button>
         </div>
       </div>
     </div>
