@@ -8,9 +8,27 @@
          "descripcion": "curso html",
          "cupos": 10,
          "inscritos": 0,
-         "img": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png"
+         "img": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png",
+
+         "niveles":[{
+
+
+         "nv1":[{  "id":1,
+                "nombre": "html-Basico",                
+                "descripcion":"bla",
+                "precio": 200,
+                "duracion": "1 mes"
+            }],
+            
+            
+        "nv2":[{  "id":2,
+                "nombre": "html-Medio",                
+                "descripcion":"bla",
+                "precio": 200,
+                "duracion": "1 mes"
+            }]
     
-    },
+         }]},
     {
         "codigo": "0002",
          "nombre": "CSS", 
@@ -20,7 +38,27 @@
          "descripcion": "curso css",
          "cupos": 20,
          "inscritos": 0,
-         "img": "https://lineadecodigo.com/wp-content/uploads/2014/04/css.png"
+         "img": "https://lineadecodigo.com/wp-content/uploads/2014/04/css.png",
+
+         "niveles":[{
+
+
+            "nv1":[{"id":1,
+                   "nombre": "css-Basico",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }],
+               
+               
+           "nv2":[{"id":2,
+                   "nombre": "css-Medio",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }]
+       
+            }]
     
     },
     {
@@ -32,7 +70,26 @@
          "descripcion": "curso sass",
          "cupos": 30,
          "inscritos": 0,
-         "img": "https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png"
+         "img": "https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png",
+         "niveles":[{
+
+
+            "nv1":[{  "id":1,
+                   "nombre": "html-Basico",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }],
+               
+               
+           "nv2":[{  "id":2,
+                   "nombre": "html-Basico",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }]
+       
+            }]
     
     },
     {
@@ -44,7 +101,26 @@
          "descripcion": "curso vue",
          "cupos": 15,
          "inscritos": 0,
-         "img": "https://thumbs.gfycat.com/PinkPiercingBull-size_restricted.gif"
+         "img": "https://thumbs.gfycat.com/PinkPiercingBull-size_restricted.gif",
+         "niveles":[{
+
+
+            "nv1":[{  "id":1,
+                   "nombre": "html-Basico",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }],
+               
+               
+           "nv2":[{  "id":2,
+                   "nombre": "html-Basico",                
+                   "descripcion":"bla",
+                   "precio": 200,
+                   "duracion": "1 mes"
+               }]
+       
+            }]
     
     }
     

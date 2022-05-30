@@ -3,18 +3,18 @@
   <thead>
     <tr>
   
+      <th scope="col">Id</th>
       <th scope="col">Nombre</th>
-      <th scope="col">Apellido</th>
-      <th scope="col">Fecha de Nacimiento</th>
-      <th scope="col">Edad</th>
+      <th scope="col">Precio</th>
+      <th scope="col">Duracion</th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for ="(item,index) in item" :key="index">
-      <td>{{item.Nombre}}</td>
-      <td>{{item.Apellido}}</td>
-      <td>{{item.Fecha}}</td>
-      <td>{{item.Edad}}</td>
+    <tr v-for ="(item,index) in cursosAdmin" :key="index">
+      <td>{{item.niveles.nv1.id}}</td>
+      <td>{{item.niveles.nv1.nombre}}</td>
+      <td>{{item.niveles.nv1.precio}}</td>
+      <td>{{item.niveles.nv1.duracion}}</td>
     </tr>
    </tbody>
 </table>
@@ -23,6 +23,24 @@
 
 <script>
 export default {
+  data(){
+     return{
+       cursosAdmin:[],
+
+
+     }},
+
+  async created(){
+    try{
+      const response  = await fetch('/cursos.json')
+      const datoscurso = await response.json()
+      this.cursosAdmin = datoscurso.cursos
+
+
+    }catch(error){
+      console.log(error.message)
+    }
+} 
 
 }
 </script>
