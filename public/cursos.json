@@ -1,34 +1,32 @@
 {"cursos":[
     {
         "codigo": "0001",
-         "nombre": "HTML", 
-         "estado": true, 
-         "precio": "30000", 
-         "duracion":"1 mes", 
-         "descripcion": "curso html",
-         "cupos": 10,
-         "inscritos": 0,
-         "img": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png",
+        "nombre": "HTML", 
+        "estado": true, 
+        "precio": "30000", 
+        "duracion":"1 mes", 
+        "descripcion": "curso html",
+        "cupos": 10,
+        "inscritos": 0,
+        "img": "https://www.w3.org/html/logo/downloads/HTML5_Logo_512.png",
 
-         "niveles":[{
-
-
-         "nv1":[{  "id":1,
+        "niveles":[
+            { 
+                "id":1,
                 "nombre": "html-Basico",                
                 "descripcion":"bla",
                 "precio": 200,
                 "duracion": "1 mes"
-            }],
-            
-            
-        "nv2":[{  "id":2,
+            },
+            {
+                "id":2,
                 "nombre": "html-Medio",                
                 "descripcion":"bla",
-                "precio": 200,
-                "duracion": "1 mes"
-            }]
-    
-         }]},
+                "precio": 300,
+                "duracion": "2 mes"
+            }
+        ]
+    },
     {
         "codigo": "0002",
          "nombre": "CSS", 
@@ -40,26 +38,22 @@
          "inscritos": 0,
          "img": "https://lineadecodigo.com/wp-content/uploads/2014/04/css.png",
 
-         "niveles":[{
-
-
-            "nv1":[{"id":1,
-                   "nombre": "css-Basico",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }],
-               
-               
-           "nv2":[{"id":2,
-                   "nombre": "css-Medio",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }]
-       
-            }]
-    
+         "niveles":[
+            {    
+                "id":1,
+                "nombre": "css-Basico",                
+                "descripcion":"bla",
+                "precio": 200,
+                "duracion": "1 mes"
+            },
+            {
+                "id":2,
+                "nombre": "css-Medio",                
+                "descripcion":"bla",
+                "precio": 300,
+                "duracion": "2 mes"
+            }
+        ]
     },
     {
         "codigo": "0003",
@@ -71,25 +65,23 @@
          "cupos": 30,
          "inscritos": 0,
          "img": "https://miro.medium.com/max/512/1*9U1toerFxB8aiFRreLxEUQ.png",
-         "niveles":[{
 
-
-            "nv1":[{  "id":1,
-                   "nombre": "html-Basico",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }],
-               
-               
-           "nv2":[{  "id":2,
-                   "nombre": "html-Basico",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }]
-       
-            }]
+         "niveles":[
+            {
+                "id":1,
+                "nombre": "sass-Basico",                
+                "descripcion":"bla",
+                "precio": 200,
+                "duracion": "1 mes"
+            },
+            {
+                "id":2,
+                "nombre": "sass-Medio",                
+                "descripcion":"bla",
+                "precio": 300,
+                "duracion": "2 mes"
+            }
+        ]
     
     },
     {
@@ -102,26 +94,22 @@
          "cupos": 15,
          "inscritos": 0,
          "img": "https://thumbs.gfycat.com/PinkPiercingBull-size_restricted.gif",
-         "niveles":[{
 
-
-            "nv1":[{  "id":1,
-                   "nombre": "html-Basico",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }],
-               
-               
-           "nv2":[{  "id":2,
-                   "nombre": "html-Basico",                
-                   "descripcion":"bla",
-                   "precio": 200,
-                   "duracion": "1 mes"
-               }]
-       
-            }]
-    
-    }
-    
+         "niveles":[
+            {  
+                "id":1,
+                "nombre": "vue-Basico",                
+                "descripcion":"bla",
+                "precio": 200,
+                "duracion": "1 mes"
+            },
+            {
+                "id":2,
+                "nombre": "vue-Medio",                
+                "descripcion":"bla",
+                "precio": 300,
+                "duracion": "2 mes"
+            }
+        ]
+    } 
 ]}

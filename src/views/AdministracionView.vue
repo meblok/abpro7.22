@@ -1,15 +1,11 @@
 <template>
-  <Tabla />
+  <div>
+    <router-view/>
+  </div>
 </template>
 
 <script>
-import Tabla from '@/components/Tabla.vue'
-export default {
-    components:{
-        Tabla
-    }
 
-}
 </script>
 
 <style>

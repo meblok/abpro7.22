@@ -5,16 +5,18 @@
   
       <th scope="col">Id</th>
       <th scope="col">Nombre</th>
+      <th scope="col">Descripción</th>
       <th scope="col">Precio</th>
-      <th scope="col">Duracion</th>
+      <th scope="col">Duración</th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for ="(item,index) in cursosAdmin" :key="index">
-      <td>{{item.niveles.nv1.id}}</td>
-      <td>{{item.niveles.nv1.nombre}}</td>
-      <td>{{item.niveles.nv1.precio}}</td>
-      <td>{{item.niveles.nv1.duracion}}</td>
+    <tr v-for="(item, index) in cursoAdmin" :key="index">
+      <!-- <td>{{item.niveles}}</td> -->
+      <td>{{item.nombre}}</td>
+      <td>{{item.descripcion}}</td>
+      <td>{{item.precio}}</td>
+      <td>{{item.duracion}}</td> 
     </tr>
    </tbody>
 </table>
@@ -24,23 +26,35 @@
 <script>
 export default {
   data(){
-     return{
-       cursosAdmin:[],
-
-
-     }},
-
-  async created(){
-    try{
-      const response  = await fetch('/cursos.json')
-      const datoscurso = await response.json()
-      this.cursosAdmin = datoscurso.cursos
-
-
-    }catch(error){
-      console.log(error.message)
+    return{
+      cursoAdmin: [],
     }
-} 
+  },
+  created() {
+    this.cursoAdmin = this.$route.params.datos;
+  },
+  // data(){
+  //   return{
+  //     cursosAdmin:[],
+  //   }   
+  // },
+
+  // async created(){
+  //   try{
+  //     const response  = await fetch('/cursos.json')
+  //     const datoscurso = await response.json()
+  //     this.cursosAdmin = datoscurso.cursos
+
+
+  //   }catch(error){
+  //    console.log(error.message)
+  //   }
+  // },
+  // computed:{
+  //   html(){
+  //     return this.cursosAdmin.niveles
+  //   }
+  // }
 
 }
 </script>

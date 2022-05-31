@@ -19,7 +19,7 @@
           <p class="card-text">Valor: {{ item.precio }}</p>
           <p class="card-text">Duracion: {{ item.duracion }}</p>
           <p class="card-text">Cupos: {{ item.cupos }}</p>
-          <button >Ver mas</button>
+          <button @click="verCurso(item.nombre)">Ver mas</button>
         </div>
       </div>
     </div>
@@ -34,9 +34,20 @@ export default {
   data(){
      return{
        cursos:[],
+       cursoSeleccionado:[],
 
 
      }},
+
+     methods: {
+    shareData(item) {
+      this.cursoSeleccionado.push(item)
+      this.$router.push({
+        name: "datos",
+        params: { datos: this.cursoSeleccionado },
+      });
+    },
+  },
 
   async created(){
     try{
