@@ -16,13 +16,13 @@ const routes = [
     component: () => import('../views/LoginView.vue')
   },
   {
-    path: '/router',
-    name: 'router',    
+    path: '/administracion',
+    name: 'administracion',    
     component: () => import('../views/AdministracionView.vue'),
     children: [
       {
         path: ":id",
-        name: "routerID",
+        name: "tabla",
         component: () => import('../components/Tabla.vue'),
       }, 
     ],

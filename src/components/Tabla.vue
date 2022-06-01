@@ -12,11 +12,9 @@
   </thead>
   <tbody>
     <tr v-for="(item, index) in cursoAdmin" :key="index">
-      <!-- <td>{{item.niveles}}</td> -->
       <td>{{item}}</td>
-      <!-- <td>{{item.descripcion}}</td>
-      <td>{{item.precio}}</td>
-      <td>{{item.duracion}}</td>  -->
+      <!-- <td>{{item}}</td> -->
+      
     </tr>
    </tbody>
 </table>
@@ -27,12 +25,20 @@
 export default {
   data(){
     return{
-      cursoAdmin: [],
+      cursoAdmin:[],
     }
   },
+
+  // computed:{
+  //   niveles(){
+  //     return this.cursoAdmin.niveles
+  //   }
+  // },
+
   created() {
     this.cursoAdmin = this.$route.params.datos;
-  },
+  }
+  
   // data(){
   //   return{
   //     cursosAdmin:[],
