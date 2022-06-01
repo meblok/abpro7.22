@@ -3,20 +3,20 @@
   <thead>
     <tr>
   
-      <th scope="col">Id</th>
+      <!-- <th scope="col">Id</th> -->
       <th scope="col">Nombre</th>
-      <th scope="col">Descripción</th>
+      <!-- <th scope="col">Descripción</th>
       <th scope="col">Precio</th>
-      <th scope="col">Duración</th>
+      <th scope="col">Duración</th> -->
     </tr>
   </thead>
   <tbody>
     <tr v-for="(item, index) in cursoAdmin" :key="index">
       <!-- <td>{{item.niveles}}</td> -->
-      <td>{{item.nombre}}</td>
-      <td>{{item.descripcion}}</td>
+      <td>{{item}}</td>
+      <!-- <td>{{item.descripcion}}</td>
       <td>{{item.precio}}</td>
-      <td>{{item.duracion}}</td> 
+      <td>{{item.duracion}}</td>  -->
     </tr>
    </tbody>
 </table>

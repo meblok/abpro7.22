@@ -16,12 +16,12 @@ const routes = [
     component: () => import('../views/LoginView.vue')
   },
   {
-    path: '/administracion',
-    name: 'administracion',    
+    path: '/router',
+    name: 'router',    
     component: () => import('../views/AdministracionView.vue'),
     children: [
       {
-        path: ":name",
+        path: ":id",
         name: "routerID",
         component: () => import('../components/Tabla.vue'),
       }, 
