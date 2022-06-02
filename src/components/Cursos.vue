@@ -20,8 +20,8 @@
           <p class="card-text">Duracion: {{ item.duracion }}</p>
           <p class="card-text">Cupos: {{ item.cupos }}</p>
 
-          <!-- <router-link :to="{ name: 'tabla', params: { id: item.nombre } }">  -->
-            <button @click="verCurso(item.niveles)">Ver mas</button>
+          <!-- <router-link :to="{ name: 'tabla' }">  -->
+            <button @click="verCurso(item)">Ver mas</button>
            <!-- </router-link>  -->
         </div>
       </div>
@@ -38,16 +38,16 @@ export default {
   data(){
     return{
       cursos:[],
-      cursoSeleccionado:[],
+      // cursoSeleccionado:[],
      }
   },
 
   methods: {
     verCurso(item) {
-      this.cursoSeleccionado.push(item)
+      // this.cursoSeleccionado.push(item)
       this.$router.push({
         name: "tabla",
-        params: { datos: this.cursoSeleccionado},
+        params: { datos: item.niveles, id: item.nombre},
       });
     },
   },

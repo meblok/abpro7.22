@@ -13,17 +13,17 @@
         "niveles":[
             { 
                 "id":1,
-                "nombre": "html-Basico",                
-                "descripcion":"bla",
+                "nombre": "HTML desde cero",                
+                "descripcion":"Aprende HTML desde niveles básicos, intermedios y avanzados, para crear aplicaciones y sitios Web increíbles!",
                 "precio": 200,
                 "duracion": "1 mes"
             },
             {
                 "id":2,
-                "nombre": "html-Medio",                
-                "descripcion":"bla",
+                "nombre": "HTML nivel experto",                
+                "descripcion":"Conviértete en un experto en HTML (incluye proyectos)",
                 "precio": 300,
-                "duracion": "2 mes"
+                "duracion": "2 meses"
             }
         ]
     },
@@ -41,17 +41,17 @@
          "niveles":[
             {    
                 "id":1,
-                "nombre": "css-Basico",                
-                "descripcion":"bla",
+                "nombre": "Máster en CSS",                
+                "descripcion":"Aprende CSS3, Maquetación web, Responsive Web Design, SASS, LESS, Flexbox, CSS Grid, Bootstrap 4 y 5 desde cero +20h",
                 "precio": 200,
                 "duracion": "1 mes"
             },
             {
                 "id":2,
-                "nombre": "css-Medio",                
-                "descripcion":"bla",
+                "nombre": "CSS La Guía Completa",                
+                "descripcion":"Aprende Flexbox, CSS Grid, Custom Properties, SASS, Mixins, Gulp Workflows, Animaciones, RWD y mucho más! + 20 proyectos",
                 "precio": 300,
-                "duracion": "2 mes"
+                "duracion": "2 meses"
             }
         ]
     },
@@ -69,17 +69,17 @@
          "niveles":[
             {
                 "id":1,
-                "nombre": "sass-Basico",                
-                "descripcion":"bla",
+                "nombre": "CSS y Sass avanzados: Flexbox, Grid, animaciones y más.",                
+                "descripcion":"El curso de SASS más avanzado y moderno en Internet: master flexbox, CSS Grid, variables y mucho más.",
                 "precio": 200,
                 "duracion": "1 mes"
             },
             {
                 "id":2,
-                "nombre": "sass-Medio",                
-                "descripcion":"bla",
+                "nombre": "Sass Moderno (Lleva CSS al siguiente nivel)",                
+                "descripcion":"Aprende Sass Desde Cero y descubre el potencial para mejorar tu código CSS.",
                 "precio": 300,
-                "duracion": "2 mes"
+                "duracion": "2 meses"
             }
         ]
     
@@ -98,17 +98,17 @@
          "niveles":[
             {  
                 "id":1,
-                "nombre": "vue-Basico",                
-                "descripcion":"bla",
+                "nombre": "Vue.js: De cero a experto",                
+                "descripcion":"Vuex, unit test, composition api, options api, autenticación, composables, deployment, file structure, lazy load, y más",
                 "precio": 200,
                 "duracion": "1 mes"
             },
             {
                 "id":2,
-                "nombre": "vue-Medio",                
-                "descripcion":"bla",
+                "nombre": "Vue js 3 [Actualizado] Desde cero + Vite + Firebase 9 + MEVN",                
+                "descripcion":"Vue.js 2 y Vue.js 3! Aprende desde 0, Composition API, Vuex, Rutas protegidas, Vue CLI, Nuxt.js, Node, Express y MongoDB",
                 "precio": 300,
-                "duracion": "2 mes"
+                "duracion": "2 meses"
             }
         ]
     } 
