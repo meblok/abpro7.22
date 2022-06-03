@@ -1,6 +1,8 @@
 <template>
 <div>
-  <button type="button" class="btn btn-outline-success">Agregar cursos</button>
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#addCourse">
+  Agregar Cursos
+</button>
   <table class="table table-dark table-striped container">
   <thead>
     <tr>
@@ -23,77 +25,50 @@
         <button >
           <img src="img/edit.svg" />
         </button>
-        <button  type="button" class="btn btn-primary svg" data-bs-toggle="modal" data-bs-target="#{{item.id}}">
+        <button @click="sendId(item.id)"  type="button" class="btn btn-primary svg" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <img src="img/trash.svg" />
         </button>
       </td>
-      <!-- Modal para eliminar -->
-<div class="modal fade" :id="item.id" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ¿Quieres eliminar este curso?
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <button type="button" class="btn btn-primary" @click="deleteCourse(index)">Borrar</button>
-      </div>
-    </div>
-  </div>
-</div>
     </tr>
    </tbody>
+   <delete-modal :idCourse="idCurso" @delete="deleteCourse($event)"/>
+   <add-modal @agregar="addCourse"/>
 </table>
-<!-- Modal para eliminar -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        ...
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div> -->
-<!-- <DeleteModal /> -->
 </div>
 
   
 </template>
 
 <script>
-// import DeleteModal from '@/components/DeleteModal.vue'
+import DeleteModal from '@/components/DeleteModal.vue'
+import AddModal from '@/components/AddModal.vue'
 export default {
-  // components:{
-  //   DeleteModal,
-  // },
+  components:{
+    DeleteModal,
+    AddModal,
+  },
   data(){
     return{
       cursoAdmin:[],
+      idCurso:null,
+    }
+  },
+
+  methods:{
+    sendId(index){
+      this.idCurso == index
+    },
+    deleteCourse(event){
+      this.cursoAdmin.splice(event, 1)
+    },
+    addCourse(){
+      this.cursoAdmin.push(this.newCourse)
     }
   },
 
   created() {
     this.cursoAdmin = this.$route.params.datos;
-  },
-
-  methods:{
-    deleteCourse(index){
-      this.cursoAdmin.splice(index,1)
-    }
   }
-
 }
 </script>
 

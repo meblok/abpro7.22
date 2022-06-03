@@ -15,13 +15,13 @@
  
         <div class="card-body text-center">
           <h5 class="card-title">{{ item.nombre }}</h5>
-          <p class="card-text">Descripcion: {{ item.descripcion }}</p>
+          <p class="card-text">Descripción: {{ item.descripcion }}</p>
           <p class="card-text">Valor: {{ item.precio }}</p>
-          <p class="card-text">Duracion: {{ item.duracion }}</p>
+          <p class="card-text">Duración: {{ item.duracion }}</p>
           <p class="card-text">Cupos: {{ item.cupos }}</p>
 
           <!-- <router-link :to="{ name: 'tabla' }">  -->
-            <button @click="verCurso(item)">Ver mas</button>
+            <button @click="verCurso(item)">Ver más</button>
            <!-- </router-link>  -->
         </div>
       </div>
@@ -57,7 +57,6 @@ export default {
       const response  = await fetch('/cursos.json')
       const datoscurso = await response.json()
       this.cursos = datoscurso.cursos
-
 
     }catch(error){
       console.log(error.message)
