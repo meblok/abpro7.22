@@ -16,15 +16,20 @@
     </tr>
   </thead>
   <tbody>
-    <tr v-for="(item, index) in cursoAdmin" :key="index">
-      <td>{{item.nombre}}</td>
-      <td>{{item.descripcion}}</td>
-      <td>${{item.precio}}</td>
-      <td>{{item.duracion}}</td>
+    <tr v-for="item in cursoAdmin" :key="item.id">
+      <td>{{ item.nombre }}</td>
+      <td>{{ item.descripcion }}</td>
+      <td>${{ item.precio }}</td>
+      <td>{{ item.duracion }}</td>
       <td>
-        <button >
-          <img src="img/edit.svg" />
-        </button>
+        <!-- <router-link :to="{ name: 'edicion' }">  -->
+          <button @click="editCurso(item)"><img src="img/edit.svg" /></button>
+        <!-- </router-link>  -->
+
+        <!-- <router-link :to="{ path: `/ciudades/${item.id}` }" class="btn btn-primary mx-2">
+        Editar
+        </router-link> -->
+        
         <button @click="sendId(item.id)"  type="button" class="btn btn-primary svg" data-bs-toggle="modal" data-bs-target="#exampleModal">
           <img src="img/trash.svg" />
         </button>
@@ -32,7 +37,7 @@
     </tr>
    </tbody>
    <delete-modal :idCourse="idCurso" @delete="deleteCourse($event)"/>
-   <add-modal @agregar="addCourse"/>
+   <add-modal @agregar="addCourse($event)" />
 </table>
 </div>
 
@@ -61,9 +66,23 @@ export default {
     deleteCourse(event){
       this.cursoAdmin.splice(event, 1)
     },
-    addCourse(){
-      this.cursoAdmin.push(this.newCourse)
+    addCourse(event){
+      console.log(event)
+      this.cursoAdmin.push(event)
+    },
+    editCurso(curso){
+      this.$router.push({
+        name: "edicion",
+        params: { datas: curso, id: curso.nombre }
+      })
+
     }
+    
+    // save(){
+    //   if(confirm('¿Deseas guardar los cambios?') == true){
+    //     this.addCourse()
+    //   }
+    // }
   },
 
   created() {

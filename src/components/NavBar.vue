@@ -19,7 +19,7 @@
             <a class="nav-link" href=""><router-link to="/">Logout</router-link></a>
           </li>
           <li class="nav-item">
-           <p class="nav-link">User: admin@admin.gmail</p>
+           <p class="nav-link">User: admin@admin.com</p>
           </li>
            
         </ul>

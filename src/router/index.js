@@ -26,7 +26,12 @@ const routes = [
         component: () => import('../components/Tabla.vue'),
       }, 
     ],
-  }
+  },
+  {
+    path: '/edicion/:id',
+    name: 'edicion',
+    component: () => import('../components/EditForm.vue')
+  },
 
 ]
 
