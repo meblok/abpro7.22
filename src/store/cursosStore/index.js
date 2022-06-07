@@ -1,35 +1,32 @@
-// const characterStore = {
-//     namespaced: true,
+import Axios from "axios";
+ 
+ const characterStore = {
+     namespaced: true,
   
-//     state: () => ({
-//       cursos:[],
-//     }),
+     state: () => ({
+       cursos:[],
+     }),
   
-//     getters: {},
+     getters: {},
   
-//     mutations: {
+     mutations: {
         
   
   
   
-//       loadCharacters(state, params) {
-//         state.cursos = params;
-//       },
-//     },
+       loadCharacters(state, params) {
+         state.cursos = params.cursos;
+       },
+     },
    
   
-//     actions: {
-//       async getCharacters({ commit }) {
-//               try {
-//                 const response = await fetch('cursos.json')
-//                 const datoscursos = await response.json()
-//                 const cursos = datoscursos.cursos
-//                 commit('loadCharacters', cursos)
-//               } catch (error) {
-//                 console.log(error)
-//               }
-//             },
-//       },
-//   };
+     actions: {
+       async getCharacters({ commit }) {
+                 const response = await Axios.get('cursos.json')
+                 commit('loadCharacters', response.data)
+              
+             },
+       },
+   };
   
-//   export default characterStore;
+   export default characterStore;
