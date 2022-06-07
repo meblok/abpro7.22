@@ -12,10 +12,12 @@ export default {
   components:{
     NavBar,
     Cursos
-  }
+  },
+   created() {
+    this.$store.dispatch("charactersRAM/getCharacters");
+  },
 }
 </script>
 
 <style>
-
 </style>
